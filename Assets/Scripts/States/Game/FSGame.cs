@@ -7,9 +7,11 @@ using UnityEngine;
 
 public class FSGame : FSStateBase
 {
+
     private const float k_timeBetweenStates = 3.0f;
 
     private UIGame m_gameUI = null;
+    private GridData m_gridData = null;
     private float m_timeBetweenStates = k_timeBetweenStates;
 
     protected override bool AquireUIFromScene()
@@ -21,6 +23,8 @@ public class FSGame : FSStateBase
 
     protected override void StartPresentingState()
     {
+        m_gridData = Resources.Load<GridData>("GridData");
+        m_gameUI.SetUpGrid(m_gridData);
         m_gameUI.SetMessage("Imagine if there was a game here!");
     }
 
@@ -61,5 +65,10 @@ public class FSGame : FSStateBase
         {
             EndDismissingState();
         }
+    }
+
+    public override void HandleMessage(string message)
+    {
+        Debug.Log(message);
     }
 }
