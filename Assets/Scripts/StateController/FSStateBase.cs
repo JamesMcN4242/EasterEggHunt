@@ -109,7 +109,7 @@ public class FSStateBase
 
     protected virtual void UpdateDismissingState()
     {
-        m_status = Status.DISMISSED;
+        EndDismissingState();
     }
     
 

@@ -39,8 +39,10 @@ public class GridUI : MonoBehaviour
 
                 if(!string.IsNullOrEmpty(m_buttonMsgFormat))
                 {
+                    string message = string.Format(m_buttonMsgFormat, j, i);
                     UIButtonInteraction interaction = rect.GetComponent<UIButtonInteraction>();
-                    interaction.message = string.Format(m_buttonMsgFormat, i, j);
+                    interaction.message = message;
+                    interaction.name = message;
                 }
             }
             yMin += yOffset;
