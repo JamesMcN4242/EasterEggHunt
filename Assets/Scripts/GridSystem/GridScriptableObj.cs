@@ -1,5 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿////////////////////////////////////////////////////////////
+/////   GridScriptableObj.cs
+/////   James McNeil - 2020
+////////////////////////////////////////////////////////////
+
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "GridData", menuName = "ScriptableObjects/GridData", order = 0)]

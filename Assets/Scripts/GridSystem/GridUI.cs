@@ -1,8 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿////////////////////////////////////////////////////////////
+/////   GridUI.cs
+/////   James McNeil - 2020
+////////////////////////////////////////////////////////////
+
 using UnityEngine;
 
-public class Grid : MonoBehaviour
+public class GridUI : MonoBehaviour
 {
     [SerializeField] 
     private GameObject m_gridElement = null;
